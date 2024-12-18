@@ -1,6 +1,3 @@
 [build]
-publish = "public"
-command = "npx tina build && hugo"
-
-[context.production.environment]
-HUGO_VERSION = "0.118.2"
+publish = "/"
+command = "tinacms build && hugo --gc --minify"
