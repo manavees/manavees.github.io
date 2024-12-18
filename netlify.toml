@@ -1,3 +1,0 @@
-[build]
-publish = "/"
-command = "tinacms build && hugo"
