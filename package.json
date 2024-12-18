@@ -1,5 +1,4 @@
-{
-  "devDependencies": {
-    "@tinacms/cli": "^1.5.0"
+  "scripts": {
+    "dev": "tinacms dev -c \"hugo server -D\"",
+    "build": "tinacms build && hugo"
   }
-}
