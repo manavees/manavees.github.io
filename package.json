@@ -1,8 +1,4 @@
 {
-  "scripts": {
-    "build": "npm run tina-build && hugo",
-    "tina-build": "tina build"
-  },
   "devDependencies": {
     "@tinacms/cli": "^1.5.0"
   }
