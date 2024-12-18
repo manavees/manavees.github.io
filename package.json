@@ -18,6 +18,5 @@
     "@tinacms/cli": "^1.6.12",
     "next-tinacms-cloudinary": "^11.0.0",
     "tinacms": "^2.5.0"
-    
   }
 }
