@@ -9,7 +9,11 @@
     "build-local": "tinacms build --local --skip-indexing --skip-cloud-checks && hugo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manavees/manavees.github.io.git"
   },
+  "homepage": "https://github.com/manavees/manavees.github.io#readme",
   "dependencies": {
     "@tinacms/auth": "^1.0.9",
     "@tinacms/cli": "^1.6.12",
