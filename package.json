@@ -6,8 +6,7 @@
     "dev": "astro dev",
     "dev:network": "astro dev --host",
     "start": "astro dev",
-    "build": "npm run tina:build && astro build",
-    "tina:build": "npx tinacms build --rootPath tina",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "preview:network": "astro dev --host",
     "astro": "astro",
@@ -29,11 +28,6 @@
     "solid-js": "^1.8.15",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3",
-    "tinacms": "^2.5.2"
-  },
-  "devDependencies": {
-    "@tinacms/cli": "^1.7.0",
     "typescript": "^5.3.3"
   }
 }
