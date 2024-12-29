@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Debug Environment Variables
-        run: echo "TINA_CLIENT_ID=${{ secrets.TINA_CLIENT_ID }}" && echo "TINA_TOKEN=${{ secrets.TINA_TOKEN }}"
+      - name: Generate tina-lock.json
+        run: npx tina build
 
       - name: Build Astro site
         run: npm run build
