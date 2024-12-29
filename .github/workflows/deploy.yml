@@ -18,17 +18,20 @@ jobs:
         with:
           node-version: 18
 
+      - name: Clear npm cache
+        run: npm cache clean --force
+
       - name: Install dependencies
         run: npm install
 
-      - name: Verify TinaCMS CLI installation
-        run: npm list @tinacms/cli || echo "TinaCMS CLI not installed"
-        
       - name: Install TinaCMS CLI
-        run: npm install @tinacms/cli@1.7.0 --no-save
+        run: npm install @tinacms/cli@1.7.0 --save-dev
+
+      - name: Debug TinaCMS CLI Installation
+        run: npm list @tinacms/cli
 
       - name: Generate tina-lock.json
-        run: npx tina build
+        run: ./node_modules/.bin/tina build
 
       - name: Build Astro site
         run: npm run build
