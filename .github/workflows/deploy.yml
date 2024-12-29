@@ -23,6 +23,9 @@ jobs:
 
       - name: Verify TinaCMS CLI installation
         run: npm list @tinacms/cli || echo "TinaCMS CLI not installed"
+        
+      - name: Install TinaCMS CLI
+        run: npm install @tinacms/cli@1.7.0 --no-save
 
       - name: Generate tina-lock.json
         run: npx tina build
