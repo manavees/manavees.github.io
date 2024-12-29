@@ -3,32 +3,27 @@ name: Deploy Astro Site with TinaCMS
 on:
   push:
     branches:
-      - main
+      - main  # Trigger workflow on pushes to the main branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Build Astro site
       - name: Build Astro site
         run: npm run build
 
-      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
