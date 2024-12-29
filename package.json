@@ -30,5 +30,8 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
     "tinacms": "^2.5.2"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^0.71.0"
   }
 }
