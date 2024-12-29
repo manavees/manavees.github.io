@@ -2,15 +2,13 @@
   <head>
     <title>TinaCMS Admin</title>
     <script is:inline>
-      import { TinaCMS } from "tinacms";
-      import tinaConfig from "../../tina/config";
+      import cms from "../../tina/tina-init";
 
-      window.addEventListener("DOMContentLoaded", async () => {
+      window.addEventListener("DOMContentLoaded", () => {
         try {
-          const cms = new TinaCMS(tinaConfig); // Initialize TinaCMS
-          cms.open(); // Automatically open TinaCMS
+          cms.open(); // Automatically open the TinaCMS interface
         } catch (err) {
-          console.error("TinaCMS initialization failed:", err);
+          console.error("TinaCMS failed to initialize:", err);
         }
       });
     </script>
