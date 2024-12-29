@@ -1,0 +1,66 @@
+collections_config:
+  blog_01_astro_sphere_file_structure:
+    path: src/content/blog/01-astro-sphere-file-structure
+    name: Blog 01 Astro Sphere File Structure
+    icon: panorama_photosphere_select
+  blog_02_astro_sphere_getting_started:
+    path: src/content/blog/02-astro-sphere-getting-started
+    name: Blog 02 Astro Sphere Getting Started
+    icon: app_settings_alt
+  blog_03_astro_sphere_add_new_post_or_projects:
+    path: src/content/blog/03-astro-sphere-add-new-post-or-projects
+    name: Blog 03 Astro Sphere Add New Post Or Projects
+    icon: broadcast_on_personal
+  blog_04_astro_sphere_writing_markdown:
+    path: src/content/blog/04-astro-sphere-writing-markdown
+    name: Blog 04 Astro Sphere Writing Markdown
+    icon: broadcast_on_personal
+  blog_05_astro_sphere_writing_mdx:
+    path: src/content/blog/05-astro-sphere-writing-mdx
+    name: Blog 05 Astro Sphere Writing Mdx
+    icon: bluetooth_searching
+  blog_06_astro_sphere_social_links:
+    path: src/content/blog/06-astro-sphere-social-links
+    name: Blog 06 Astro Sphere Social Links
+    icon: broadcast_on_personal
+  blog_a_first_test_post:
+    path: src/content/blog/a first test post
+    name: Blog A First Test Post
+    icon: airline_stops
+  legal:
+    path: src/content/legal
+    name: Legal
+    icon: clear
+  projects_project_1:
+    path: src/content/projects/project-1
+    name: Projects Project 1
+    icon: emoji_objects
+  projects_project_2:
+    path: src/content/projects/project-2
+    name: Projects Project 2
+    icon: emoji_objects
+  projects_project_3:
+    path: src/content/projects/project-3
+    name: Projects Project 3
+    icon: emoji_objects
+  projects_project_4:
+    path: src/content/projects/project-4
+    name: Projects Project 4
+    icon: emoji_objects
+  work:
+    path: src/content/work
+    name: Work
+    icon: work
+  pages:
+    path: ''
+    name: Pages
+    icon: wysiwyg
+    disable_url: true
+paths:
+  static: public
+  uploads: public/uploads
+timezone: Europe/Athens
+markdown:
+  engine: commonmark
+  options:
+    gfm: true
