@@ -7,7 +7,7 @@
     "dev:network": "astro dev --host",
     "start": "astro dev",
     "build": "npm run tina:build && astro build",
-    "tina:build": "npx tinacms build --rootPath src/tina",
+    "tina:build": "npx tinacms build --rootPath tina",
     "preview": "astro preview",
     "preview:network": "astro dev --host",
     "astro": "astro",
@@ -33,6 +33,7 @@
     "tinacms": "^2.5.2"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.7.0"
+    "@tinacms/cli": "^1.7.0",
+    "typescript": "^5.3.3"
   }
 }
