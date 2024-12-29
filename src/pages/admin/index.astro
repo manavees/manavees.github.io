@@ -1,13 +1,23 @@
 ---
-import { cms } from "../../tina/tina-init";
+import { TinaCMS } from "tinacms";
+import tinaConfig from "../../tina/config";
+
+const cms = new TinaCMS(tinaConfig);
 ---
 
 <html>
   <head>
     <title>TinaCMS Admin</title>
+    <script type="module">
+      // TinaCMS needs to be initialized client-side
+      import { TinaCMS } from "tinacms";
+      import tinaConfig from "../../tina/config";
+
+      const cms = new TinaCMS(tinaConfig);
+      cms.open();
+    </script>
   </head>
   <body>
     <h1>TinaCMS Admin Interface</h1>
-    <button onclick="cms.open()">Edit Site</button>
   </body>
 </html>
