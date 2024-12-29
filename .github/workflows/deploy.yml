@@ -37,7 +37,7 @@ jobs:
         run: ls -la ./node_modules/.bin
 
       - name: Generate tina-lock.json
-        run: npx tina build
+        run: ./node_modules/.bin/tinacms build
 
       - name: Build Astro site
         run: npm run build
