@@ -6,8 +6,8 @@ export default defineConfig({
   token: process.env.TINA_TOKEN || "", // Tina.io Token
   media: {
     tina: {
-      mediaRoot: "public/images", // Folder for media assets
-      publicFolder: "public", // Root for public files
+      mediaRoot: "public/images",
+      publicFolder: "public",
     },
   },
   schema: {
@@ -18,7 +18,7 @@ export default defineConfig({
         path: "src/pages",
         fields: [
           { type: "string", label: "Title", name: "title" },
-          { type: "rich-text", label: "Content", name: "body" },
+          { type: "rich-text", label: "Body", name: "body" },
         ],
       },
     ],
