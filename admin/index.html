@@ -1,13 +1,11 @@
 <!DOCTYPE html><html> <head><title>TinaCMS Admin</title><script>
-      import { TinaCMS } from "tinacms";
-      import tinaConfig from "../../tina/config";
+      import cms from "../../tina/tina-init";
 
-      window.addEventListener("DOMContentLoaded", async () => {
+      window.addEventListener("DOMContentLoaded", () => {
         try {
-          const cms = new TinaCMS(tinaConfig); // Initialize TinaCMS
-          cms.open(); // Automatically open TinaCMS
+          cms.open(); // Automatically open the TinaCMS interface
         } catch (err) {
-          console.error("TinaCMS initialization failed:", err);
+          console.error("TinaCMS failed to initialize:", err);
         }
       });
     </script></head> <body> <h1>Welcome to TinaCMS</h1> <p>If the admin interface doesn't load, check the browser console for errors.</p> </body></html>
