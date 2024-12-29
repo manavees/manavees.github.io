@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Debug Tina Folder
-        run: ls -la src/tina
-
       - name: Generate tina-lock.json
         run: npm run tina:build
 
