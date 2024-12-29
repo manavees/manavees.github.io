@@ -1,6 +1,7 @@
 name: Deploy Astro Site
 
 on:
+  workflow_dispatch:  # Allows manual triggering of the workflow
   push:
     branches:
       - main  # Trigger workflow on pushes to the main branch
