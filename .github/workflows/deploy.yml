@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Verify TinaCMS CLI installation
+        run: npm list @tinacms/cli || echo "TinaCMS CLI not installed"
+
       - name: Generate tina-lock.json
         run: npx tina build
 
