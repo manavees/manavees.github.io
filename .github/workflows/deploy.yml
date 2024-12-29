@@ -3,7 +3,7 @@ name: Deploy Astro Site with TinaCMS
 on:
   push:
     branches:
-      - main  # Trigger workflow on pushes to the main branch
+      - main
 
 jobs:
   build-and-deploy:
@@ -20,6 +20,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Debug Environment Variables
+        run: echo "TINA_CLIENT_ID=${{ secrets.TINA_CLIENT_ID }}" && echo "TINA_TOKEN=${{ secrets.TINA_TOKEN }}"
 
       - name: Build Astro site
         run: npm run build
