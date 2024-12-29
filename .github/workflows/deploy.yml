@@ -21,8 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Verify TinaCMS Folder
+        run: ls -la tina
+
       - name: Generate tina-lock.json
-        run: npm run tina:build
+        run: npx tinacms build --rootPath tina
 
       - name: Build Astro site
         run: npm run build
