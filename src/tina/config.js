@@ -1,9 +1,9 @@
 import { defineConfig } from "tinacms";
 
 export default defineConfig({
-  branch: "main", // Branch where content changes are saved
-  clientId: process.env.TINA_CLIENT_ID, // Tina.io Client ID
-  token: process.env.TINA_TOKEN, // Tina.io Token
+  branch: "main", // The branch where content changes are committed
+  clientId: process.env.TINA_CLIENT_ID || "", // Ensure this is a valid string
+  token: process.env.TINA_TOKEN || "", // Ensure this is a valid string
   media: {
     tina: {
       mediaRoot: "public/images",
