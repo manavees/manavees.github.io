@@ -1,30 +1,21 @@
 <html>
   <head>
     <title>TinaCMS Admin</title>
-  </head>
-  <body>
-    <h1>Welcome to TinaCMS</h1>
-    <p>If the admin interface doesn't load, check the browser console for errors.</p>
-
     <script type="module" is:inline>
       import { TinaCMS } from "tinacms";
       import tinaConfig from "../../tina/config";
 
       window.addEventListener("DOMContentLoaded", async () => {
         try {
-          // Fetch the tina-lock.json file if needed
-          const response = await fetch("/tina-lock.json");
-          if (!response.ok) {
-            throw new Error("Failed to load tina-lock.json");
-          }
-          const lockConfig = await response.json();
-
-          const cms = new TinaCMS({ ...tinaConfig, ...lockConfig });
-          cms.open(); // Automatically open the TinaCMS interface
+          const cms = new TinaCMS(tinaConfig);
+          cms.open();
         } catch (err) {
           console.error("TinaCMS initialization failed:", err);
         }
       });
     </script>
+  </head>
+  <body>
+    <h1>Welcome to TinaCMS Admin</h1>
   </body>
 </html>
