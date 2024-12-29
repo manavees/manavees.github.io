@@ -1,13 +1,13 @@
-import { defineConfig, TinaCMSConfig } from "tinacms";
+import { defineConfig } from "tinacms";
 
-const tinaConfig: TinaCMSConfig = defineConfig({
-  branch: "main",
-  clientId: process.env.TINA_CLIENT_ID || "",
-  token: process.env.TINA_TOKEN || "",
+export default defineConfig({
+  branch: "main", // The branch where content changes are committed
+  clientId: process.env.TINA_CLIENT_ID || "", // Tina.io Client ID
+  token: process.env.TINA_TOKEN || "", // Tina.io Token
   media: {
     tina: {
-      mediaRoot: "public/images",
-      publicFolder: "public",
+      mediaRoot: "public/images", // Folder for media assets
+      publicFolder: "public", // Root for public files
     },
   },
   schema: {
@@ -24,5 +24,3 @@ const tinaConfig: TinaCMSConfig = defineConfig({
     ],
   },
 });
-
-export default tinaConfig;
