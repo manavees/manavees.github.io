@@ -1,13 +1,13 @@
 import { defineConfig } from "tinacms";
 
 export default defineConfig({
-  branch: "main", // Git branch where changes are committed
-  clientId: process.env.TINA_CLIENT_ID || "", // Tina.io Client ID
-  token: process.env.TINA_TOKEN || "", // Tina.io Token
+  branch: "main", // The branch where changes are committed
+  clientId: process.env.TINA_CLIENT_ID || "", // Your Tina.io Client ID
+  token: process.env.TINA_TOKEN || "", // Your Tina.io Token
   media: {
     tina: {
-      mediaRoot: "public/images", // Path for media files
-      publicFolder: "public",
+      publicFolder: "public", // Directory for static assets (e.g., images)
+      mediaRoot: "images", // Subdirectory within the public folder for media files
     },
   },
   schema: {
@@ -17,8 +17,8 @@ export default defineConfig({
         name: "pages",
         path: "src/pages",
         fields: [
-          { type: "string", name: "title", label: "Title" },
-          { type: "rich-text", name: "body", label: "Content" },
+          { type: "string", label: "Title", name: "title" },
+          { type: "rich-text", label: "Body", name: "body" },
         ],
       },
     ],
