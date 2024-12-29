@@ -25,7 +25,7 @@ jobs:
         run: ls -la tina
 
       - name: Generate tina-lock.json
-        run: npx tinacms build --rootPath tina
+        run: npx tinacms build
 
       - name: Build Astro site
         run: npm run build
