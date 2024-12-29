@@ -1,23 +1,22 @@
----
-import { TinaCMS } from "tinacms";
-import tinaConfig from "../../tina/config";
-
-const cms = new TinaCMS(tinaConfig);
----
-
 <html>
   <head>
     <title>TinaCMS Admin</title>
-    <script type="module">
-      // TinaCMS needs to be initialized client-side
+    <script is:inline>
       import { TinaCMS } from "tinacms";
       import tinaConfig from "../../tina/config";
 
-      const cms = new TinaCMS(tinaConfig);
-      cms.open();
+      window.addEventListener("DOMContentLoaded", async () => {
+        try {
+          const cms = new TinaCMS(tinaConfig); // Initialize TinaCMS
+          cms.open(); // Automatically open TinaCMS
+        } catch (err) {
+          console.error("TinaCMS initialization failed:", err);
+        }
+      });
     </script>
   </head>
   <body>
-    <h1>TinaCMS Admin Interface</h1>
+    <h1>Welcome to TinaCMS</h1>
+    <p>If the admin interface doesn't load, check the browser console for errors.</p>
   </body>
 </html>
