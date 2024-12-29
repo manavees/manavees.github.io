@@ -2,8 +2,8 @@ import { defineConfig } from "tinacms";
 
 export default defineConfig({
   branch: "main", // Branch where content changes are saved
-  clientId: process.env.TINA_CLIENT_ID, // From Tina.io dashboard
-  token: process.env.TINA_TOKEN, // From Tina.io dashboard
+  clientId: process.env.TINA_CLIENT_ID, // Tina.io Client ID
+  token: process.env.TINA_TOKEN, // Tina.io Token
   media: {
     tina: {
       mediaRoot: "public/images",
@@ -23,7 +23,7 @@ export default defineConfig({
             name: "title",
           },
           {
-            type: "string",
+            type: "rich-text",
             label: "Content",
             name: "body",
           },
