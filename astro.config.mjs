@@ -8,4 +8,10 @@ import solidJs from "@astrojs/solid-js"
 export default defineConfig({
   site: "https://manavees.github.io",
   integrations: [mdx(), sitemap(), solidJs(), tailwind({ applyBaseStyles: false })],
+  vite: {
+    define: {
+      "process.env.TINA_CLIENT_ID": JSON.stringify(process.env.TINA_CLIENT_ID),
+      "process.env.TINA_TOKEN": JSON.stringify(process.env.TINA_TOKEN),
+    },
+  },
 })
